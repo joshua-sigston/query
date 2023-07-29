@@ -188,7 +188,9 @@ main {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover,
+.btns_container button:hover {
+  cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
@@ -210,6 +212,20 @@ main {
 
 .btn_fade {
   opacity: .5;
+}
+
+.btns_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btns_container button {
+  border: none;
+  border-radius: .5rem;
+  font-family: var(--ff-sub-title);
+  background-color: var(--clr-picton-blue);
+  padding-inline: .5em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 @media screen and (min-width: 768px) {

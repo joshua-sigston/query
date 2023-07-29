@@ -4,6 +4,7 @@ const quizContainer = document.getElementById('quiz-container');
 const question = document.getElementById('question');
 const answersContainer = document.getElementById('answers-container');
 const nextBtn = document.getElementById('next');
+const homeBtn = document.getElementById('home');
 
 const questions = [];
 let currentQuestionIndex = 0;
@@ -26,6 +27,7 @@ const selectAnswer= e => {
   })
 }
 
+// next button functionality
 const nextQuestion = (arr) => {
   currentQuestionIndex++;
   if(currentQuestionIndex < arr.length) {
@@ -36,7 +38,19 @@ const nextQuestion = (arr) => {
   }
 }
 
+nextBtn.addEventListener('pointerdown', () => {
+  if(currentQuestionIndex < questions.length ) {
+    nextQuestion(questions);
+  } else {
+    selectCategory();
+  }
+})
 
+// home button
+homeBtn.addEventListener('pointerdown', () => {
+    categoryContainer.classList.remove('inactive')
+    quizContainer.style.display = 'none'
+})
 
 // api data request funciton that takes one parameter being the subject selected by the user.
 const fetchQuestions = async (category) => {
@@ -119,10 +133,3 @@ history.addEventListener('pointerdown', () => {
   setTimeout(displayQuestion, 300, questions)
 })
 
-nextBtn.addEventListener('pointerdown', () => {
-  if(currentQuestionIndex < questions.length ) {
-    nextQuestion(questions);
-  } else {
-    selectCategory();
-  }
-})
