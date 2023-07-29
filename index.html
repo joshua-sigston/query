@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- styles -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- fonts links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Andika&family=Archivo+Black&family=Merriweather+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <title>Query</title>
+</head>
+<body>
+  <header>
+    <h1>Query</h1>
+   <div id="category-container">
+    <h3>select category</h3>
+    <nav class="nav">
+      <ul class="flex_column">
+        <li id="computers" class="cat">computers</li>
+        <li id="mythology" class="cat">mythology</li>
+        <li id="history" class="cat">history</li>
+        <li id="math" class="cat">math</li>
+      </ul>
+    </nav>
+   </div>
+  </header>
+  <main>
+    <section class="quiz_container inactive" id="quiz-container">
+      <h4 id="question"></h4>
+      <div class="answers_container" id="answers-container"></div>
+      <button class="next_btn" id="next">Next</button>
+    </section>
+  </main>
+  
+  <script src="index.js"></script>
+</body>
+</html>
